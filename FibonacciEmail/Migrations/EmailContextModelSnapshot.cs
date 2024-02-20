@@ -20,7 +20,7 @@ namespace FibonacciEmail.Migrations
 
             modelBuilder.Entity("FibonacciEmail.Model.EmailModel", b =>
                 {
-                    b.Property<int>("_id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -34,7 +34,7 @@ namespace FibonacciEmail.Migrations
                     b.Property<int>("Number2")
                         .HasColumnType("int");
 
-                    b.HasKey("_id");
+                    b.HasKey("Id");
 
                     b.ToTable("emailmodels");
                 });

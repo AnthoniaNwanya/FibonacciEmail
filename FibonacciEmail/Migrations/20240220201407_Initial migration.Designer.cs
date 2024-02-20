@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FibonacciEmail.Migrations
 {
     [DbContext(typeof(EmailContext))]
-    [Migration("20240124092630_Initial migration")]
+    [Migration("20240220201407_Initial migration")]
     partial class Initialmigration
     {
         /// <inheritdoc />
@@ -23,7 +23,7 @@ namespace FibonacciEmail.Migrations
 
             modelBuilder.Entity("FibonacciEmail.Model.EmailModel", b =>
                 {
-                    b.Property<int>("_id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -37,7 +37,7 @@ namespace FibonacciEmail.Migrations
                     b.Property<int>("Number2")
                         .HasColumnType("int");
 
-                    b.HasKey("_id");
+                    b.HasKey("Id");
 
                     b.ToTable("emailmodels");
                 });

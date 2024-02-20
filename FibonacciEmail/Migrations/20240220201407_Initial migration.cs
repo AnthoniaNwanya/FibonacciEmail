@@ -18,7 +18,7 @@ namespace FibonacciEmail.Migrations
                 name: "emailmodels",
                 columns: table => new
                 {
-                    _id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Number1 = table.Column<int>(type: "int", nullable: false),
                     Number2 = table.Column<int>(type: "int", nullable: false),
@@ -27,7 +27,7 @@ namespace FibonacciEmail.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_emailmodels", x => x._id);
+                    table.PrimaryKey("PK_emailmodels", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
         }

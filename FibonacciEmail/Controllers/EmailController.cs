@@ -2,6 +2,7 @@
 using FibonacciEmail.Logic;
 using FibonacciEmail.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PostmarkDotNet;
 namespace FibonacciEmail.Controllers
@@ -43,8 +44,11 @@ namespace FibonacciEmail.Controllers
 
                     if (sendResult.Status == PostmarkStatus.Success)
                     {
+                        _ctx.emailmodels.Add(request);
+                        await _ctx.SaveChangesAsync();
                         return Ok("Email was sent successfully.");
                     }
+
 
                 }
                 catch (Exception ex)
