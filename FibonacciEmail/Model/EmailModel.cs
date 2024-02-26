@@ -10,8 +10,14 @@ namespace FibonacciEmail.Model
 
         [SwaggerSchema(ReadOnly = true)]
         public int Id { get; set; }
+
+        [Required]
         public int Number1 { get; set; }
+
+        [Required]
         public int Number2 { get; set; }
+
+        [Required]
         public string EmailAddress { get; set; }
 
 
